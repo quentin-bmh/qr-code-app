@@ -1,0 +1,10 @@
+version: '3'
+services:
+  qr-app:
+    build: .
+    container_name: qr-code-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./public/qrcodes:/app/public/qrcodes
